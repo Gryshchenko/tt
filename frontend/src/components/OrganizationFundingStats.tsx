@@ -45,7 +45,7 @@ const OrganizationFundingStats: React.FC<{ organizationId: string }> = ({ organi
               title="Total Funding Amount"
               value={fundingStats?.totalFundingAmount?.toFixed(2)}
               prefix="$"
-              valueStyle={{ color: '#cf1322' }}
+              valueStyle={{ color: '#cf1322', fontSize: 21 }}
             />
           </Card>
         </Col>

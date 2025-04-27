@@ -5,6 +5,7 @@ import Sceleton from './Sceleton';
 import Empty from './Empty';
 import { useQuery } from '@apollo/client';
 import GET_FUNDING_ROUND_STATS from '../querys/getFundingRoundStats';
+import formatNumber from '../utils/formatNumber';
 
 
 
@@ -46,7 +47,7 @@ const FundingRoundStats = () => {
                         <YAxis
                             domain={[0, (dataMax: number) => dataMax * 1.1]}
                             yAxisId="left"
-                            tickFormatter={(value) => new Intl.NumberFormat().format(value)}
+                            tickFormatter={(value) => formatNumber(value)}
                         />
                         <YAxis
                             yAxisId="right"

@@ -5,6 +5,7 @@ import Sceleton from './Sceleton';
 import Empty from './Empty';
 import YEARLY_FUNDING_SUM from '../querys/getYearlyFundingSum';
 import { useQuery } from '@apollo/client';
+import formatNumber from '../utils/formatNumber';
 
 
 
@@ -42,7 +43,7 @@ const YearlyFundingSumChart = () => {
                             <YAxis
                                 yAxisId="left"
                                 domain={[0, (dataMax: number) => dataMax * 1.1]}
-                                tickFormatter={(value) => new Intl.NumberFormat().format(value)}
+                                tickFormatter={(value) => formatNumber(value)}
                             />
                             <YAxis
                                 yAxisId="right"
